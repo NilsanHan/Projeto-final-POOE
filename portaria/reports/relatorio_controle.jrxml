@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_controle" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1adf6f3-7c9c-48cf-b1ff-a597334e189b">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[cG9ydGFyaWEudGFiX2NvbnRyb2xlIEFTICw1OSw5NSxkYmRkNTMwMi05MDZhLTQ2MzctODg5OC1l
+OTkzNTAzMWYyMTI7]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="MySQLDataAdapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT portaria.tab_controle.`CONTROLE_ESTADO`,
+	portaria.tab_controle.`CONTROLAR_ID`,
+	portaria.tab_controle.`CONTROLE_HORARIO`
+FROM portaria.tab_controle]]>
+	</queryString>
+	<field name="CONTROLE_ESTADO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="CONTROLE_ESTADO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tab_controle"/>
+	</field>
+	<field name="CONTROLAR_ID" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="CONTROLAR_ID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tab_controle"/>
+	</field>
+	<field name="CONTROLE_HORARIO" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.label" value="CONTROLE_HORARIO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tab_controle"/>
+	</field>
+	<group name="CONTROLE_ESTADO">
+		<groupExpression><![CDATA[$F{CONTROLE_ESTADO}]]></groupExpression>
+	</group>
+	<group name="CONTROLAR_ID">
+		<groupExpression><![CDATA[$F{CONTROLAR_ID}]]></groupExpression>
+	</group>
+	<group name="CONTROLE_HORARIO">
+		<groupExpression><![CDATA[$F{CONTROLE_HORARIO}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="259" height="70" uuid="f93d9139-1acf-40b9-9ec0-78228a141164"/>
+				<imageExpression><![CDATA["Birigui.3bf6b34ab06642be8871.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="10" width="440" height="40" uuid="8ebdca81-b120-4340-a428-7b043e63aa1f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" rotation="None">
+					<font fontName="Arial Black" size="23" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Relatório de Entrada/Saída]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="-10" y="0" width="185" height="30" uuid="105ccf7f-3bf5-4481-b33a-f95b0713babf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9f908b4-d04b-4407-84a8-1bc998d0d484"/>
+				</reportElement>
+				<text><![CDATA[CONTROLAR_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="30" uuid="b323b283-647c-4efd-88c1-d79347b7d9f7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d0fc17c0-3aae-4c13-86c8-d2b0c0ba9e36"/>
+				</reportElement>
+				<text><![CDATA[CONTROLE_HORARIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="-2" width="185" height="30" uuid="0d646765-d699-4343-85b8-3fcf5c6418cf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4e55604c-a67c-4b2d-afca-f905cc177d0f"/>
+				</reportElement>
+				<text><![CDATA[CONTROLE_ESTADO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="185" y="0" width="185" height="30" uuid="6f7b105f-2b0b-4446-afe4-fa639414bae7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4e55604c-a67c-4b2d-afca-f905cc177d0f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CONTROLE_ESTADO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="30" uuid="200e7333-63cb-4aaa-b804-6f7fec939c9b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d0fc17c0-3aae-4c13-86c8-d2b0c0ba9e36"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CONTROLE_HORARIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="1" width="185" height="30" uuid="0d20fac9-3ba4-4c09-821e-4a0e272e79ec">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f9f908b4-d04b-4407-84a8-1bc998d0d484"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{CONTROLAR_ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="54" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="20" width="100" height="30" uuid="52361a73-c22a-4574-ac69-aee26ae8742d"/>
+				<text><![CDATA[Data: ]]></text>
+			</staticText>
+			<textField pattern="M/d/yy h:mm a">
+				<reportElement x="50" y="20" width="100" height="30" uuid="30c7702d-97a1-4d18-912b-747279ed60a5"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="20" width="100" height="30" uuid="365f932f-da0a-4a66-a7c1-44aa96a9626e"/>
+				<text><![CDATA[Página: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="470" y="20" width="100" height="30" uuid="240ba40e-e0e5-4b7a-92d7-c6784d95cff6"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
